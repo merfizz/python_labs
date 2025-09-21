@@ -8,6 +8,7 @@ name=str(input("Имя:"))
 age=int(input("Возраст:"))
 print(f"Привет, {name}! Через год тебе будет {age+1} ")
 ```
+![pic 1](./images/lab01/01.png)
 ### Задание 2
 ```
 a=float(input("a:"))
@@ -16,6 +17,7 @@ sum= a+b
 avg= sum / 2
 print(f"sum {sum:.2f}; avg= {avg:.2f}")")
 ```
+![pic 2](./images/lab01/02.png)
 ### Задание 3
 ```
 price=float(input())
@@ -26,6 +28,7 @@ vat_amount= base * (vat/100)
 total = base + vat_amount
 print(f"База послес скидки:{base:.2f} ₽\nНдс:{vat_amount:.2f} ₽\nИтого к оплате:{total:.2f} ₽\n")
 ```
+![pic 3](./images/lab01/03.png)
 ### Задание 4
 ```
 m=int(input("Минуты:"))
@@ -33,6 +36,7 @@ hh=m // 60
 mm=m % 60
 print(f"{hh}:{mm}")
 ```
+![pic 4](./images/lab01/04.png)
 ### Задание 5
 ```
 fio=str(input("ФИО: "))
@@ -46,6 +50,7 @@ for i in range (len(fio)):
         len_+=1
 print(f"Инициалы: {ini}.\nДлина (символов): {len_+2} ")
 ```
+![pic 5](./images/lab01/05.png)
 ### Задание 7
 ```
 s=str(input("in:"))
@@ -76,3 +81,4 @@ for i in range (len(s)):
             break
 print(f"out: {out}")
 ```
+![pic 7](./images/lab01/07.png)
