@@ -51,6 +51,22 @@ for i in range (len(fio)):
 print(f"Инициалы: {ini}.\nДлина (символов): {len_+2} ")
 ```
 ![pic 5](./src/image/lab01/05.png)
+
+### Задание 6
+```
+n=int(input())
+och=0
+zaoch=0
+for i in range (n):
+    s=input().split()
+    if s[3]=="True":
+        och+=1
+    else:
+        zaoch+=1
+print(f"out: {och} {zaoch}")
+```
+![pic 6](./src/image/lab01/06.png)
+
 ### Задание 7
 ```
 s=str(input("in:"))
