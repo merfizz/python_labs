@@ -5,6 +5,7 @@ flag2=0
 flag3=0
 ind2=0
 rang=0
+
 out=''
 for i in range (len(s)):
     if (flag1==0)and(ord(s[i])>=65)and(ord(s[i])<=90) :
@@ -24,7 +25,5 @@ for i in range (len(s)):
         ind2=i
         if s[i]=='.':
             break
-    
-
 
 print(f"out: {out}")
