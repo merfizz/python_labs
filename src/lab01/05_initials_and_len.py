@@ -1,3 +1,4 @@
+"""
 fio=str(input("ФИО: "))
 ini=''
 len_=0
@@ -11,3 +12,15 @@ for i in range (len(fio)):
 
 
 print(f"Инициалы: {ini}.\nДлина (символов): {len_+2} ")
+"""
+fio=str(input("ФИО: "))
+ini=''
+len_=0
+
+new_fio=fio.split()
+
+res=f"{new_fio[0][0]}{new_fio[1][0]}{new_fio[2][0]} "
+
+print(f"{res}")
+
+
