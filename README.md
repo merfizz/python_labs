@@ -40,15 +40,12 @@ print(f"{hh}:{mm}")
 ### Задание 5
 ```
 fio=str(input("ФИО: "))
-ini=''
-len_=0
-i=1
-for i in range (len(fio)):
-    if (ord(fio[i])>=1040)and(ord(fio[i])<=1071) : 
-       ini= ini + fio[i]
-    if fio[i]!=" ":
-        len_+=1
-print(f"Инициалы: {ini}.\nДлина (символов): {len_+2} ")
+new_fio=fio.split()
+fio_new=f"{new_fio[0]} {new_fio[1]} {new_fio[2]}"
+res=f"{new_fio[0][0]}{new_fio[1][0]}{new_fio[2][0]}."
+len=len(fio_new)
+print(f"Инициалы: {res} \nДлина:{len}")
+
 ```
 ![pic 5](./src/image/lab01/05.png)
 
