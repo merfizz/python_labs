@@ -2,6 +2,9 @@ from typing import *
 
 def format_record(rec: tuple[str, str, float]) -> str:
 
+    """if not isinstance(rec, tuple):
+        raise ValueError("Невернsq ввод")
+        """
     fio,group,gpa=rec
     
     if not fio.strip() or not isinstance(fio,str):
@@ -23,7 +26,7 @@ def format_record(rec: tuple[str, str, float]) -> str:
     return new_string
 
 try:
-    student=("  сидорова  анна   сергеевна ", "ABB-01", 3.999)
+    student=["  сидорова  анна   сергеевна ", "ABB-01", 3.999]
     res=format_record(student)
     print(res)
 except (ValueError,TypeError) as e:

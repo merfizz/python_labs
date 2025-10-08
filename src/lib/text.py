@@ -21,6 +21,15 @@ def tokenize(text: str) -> list[str]:
 
     return tokenstext
 
+def count_freq(tokens: list[str]) -> dict[str, int]:
+    counts={}
+    for word in tokens:
+        counts[word]=counts.get(word,0)+1
+    return counts
+
+#{'a': 3, 'b': 2, 'c': 1}
+def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
+    sorted_freq=dict(sorted(freq.items()))
 
 
-print(tokenize(normalize("emoji 😀 не слово" )))
+print (count_freq({'a': 3, 'b': 2, 'c': 1}))
