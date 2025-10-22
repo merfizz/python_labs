@@ -27,9 +27,13 @@ def count_freq(tokens: list[str]) -> dict[str, int]:
         counts[word]=counts.get(word,0)+1
     return counts
 
-#{'a': 3, 'b': 2, 'c': 1}
 def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
-    sorted_freq=dict(sorted(freq.items()))
+    sorted_freq= sorted(freq.items(),key=lambda item: [-item[1], item[0]])
+    top_n=[]
 
+    for i in range(min(n, len(sorted_freq))):
+        top_n.append((sorted_freq[i][0], sorted_freq[i][1]))
 
-print (count_freq({'a': 3, 'b': 2, 'c': 1}))
+    return top_n
+    
+
