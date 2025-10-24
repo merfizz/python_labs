@@ -30,9 +30,12 @@ def count_freq(tokens: list[str]) -> dict[str, int]:
         counts[word]=counts.get(word,0)+1
     return counts
 
+def sort_key(item):
+    return [-item[1], item[0]]
+
 def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     """Функция возвращает топ-N по убыванию частоты"""
-    sorted_freq= sorted(freq.items(),key=lambda item: [-item[1], item[0]])
+    sorted_freq= sorted(freq.items(),key=sort_key)
     top_n=[]
 
     for i in range(min(n, len(sorted_freq))):
@@ -40,17 +43,17 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
 
     return top_n
 
-print( normalize("ПрИвЕт\nМИр\t"))
-print( normalize("ёжик, Ёлка"))
-print( normalize("Hello\r\nWorld"))
-print( normalize("  двойные   пробелы  "))
+# print( normalize("ПрИвЕт\nМИр\t"))
+# print( normalize("ёжик, Ёлка"))
+# print( normalize("Hello\r\nWorld"))
+# print( normalize("  двойные   пробелы  "))
 
-print( tokenize(normalize("привет мир")))
-print( tokenize(normalize("hello,world!!!")))
-print( tokenize(normalize("2025 год")))
-print( tokenize(normalize("emoji 😀 не слово")))
+# print( tokenize(normalize("привет мир")))
+# print( tokenize(normalize("hello,world!!!")))
+# print( tokenize(normalize("2025 год")))
+# print( tokenize(normalize("emoji 😀 не слово")))
 
-print (count_freq(["a","b","a","c","b","a"]),top_n(count_freq(["a","b","a","c","b","a"]),2))
-print (count_freq(["bb","aa","bb","aa","cc"]),top_n(count_freq(["bb","aa","bb","aa","cc"]),2))
+# print (count_freq(["a","b","a","c","b","a"]),top_n(count_freq(["a","b","a","c","b","a"]),2))
+# print (count_freq(["bb","aa","bb","aa","cc"]),top_n(count_freq(["bb","aa","bb","aa","cc"]),2))
 
 
