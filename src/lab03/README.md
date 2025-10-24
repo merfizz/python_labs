@@ -41,6 +41,7 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     
 ```
 
+![pic 1](/image/lab03/test.png)
 
 
 ```
@@ -68,4 +69,4 @@ print("Топ-5:")
 for word, count in top:
     print(f"{word}:{count}")
 ```
-![pic 1](/image/lab03/image.png)
+![pic 2](/image/lab03/image.png)

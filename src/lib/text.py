@@ -39,3 +39,18 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
         top_n.append((sorted_freq[i][0], sorted_freq[i][1]))
 
     return top_n
+
+print( normalize("ПрИвЕт\nМИр\t"))
+print( normalize("ёжик, Ёлка"))
+print( normalize("Hello\r\nWorld"))
+print( normalize("  двойные   пробелы  "))
+
+print( tokenize(normalize("привет мир")))
+print( tokenize(normalize("hello,world!!!")))
+print( tokenize(normalize("2025 год")))
+print( tokenize(normalize("emoji 😀 не слово")))
+
+print (count_freq(["a","b","a","c","b","a"]),top_n(count_freq(["a","b","a","c","b","a"]),2))
+print (count_freq(["bb","aa","bb","aa","cc"]),top_n(count_freq(["bb","aa","bb","aa","cc"]),2))
+
+
