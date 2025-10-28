@@ -15,7 +15,7 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
 
 def tokenize(text: str) -> list[str]:
     """Функция разбивает текст на «слова» по небуквенно-цифровым разделителям"""
-    pattern = r'[\w+(?:-\w+)*]+'
+    pattern= r'\w+(?:-\w+)*'
     tokenstext = re.findall(pattern, text)
 
     return tokenstext
@@ -40,4 +40,19 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
 
     return top_n
 
+def summary(text):
+    normalized_text = normalize(text)
 
+    tokens = tokenize(normalized_text)
+
+    total_words = len(tokens)
+    freq_sorted = count_freq(tokens)
+    unique_words = len(freq_sorted)
+    top = top_n(freq_sorted, 5)
+
+    print(f"Всего слов: {total_words}")
+    print(f"Уникальных слов: {unique_words}")
+    print("Топ-5:")
+
+    for word, count in top:
+        print(f"{word}:{count}")

@@ -8,9 +8,8 @@ import os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-# def read_text(path: str | Path, encoding: str = "utf-8") -> str:
-#     with open(path, 'r', encoding=encoding) as file:
-#         return file.read()
+from lib.text import normalize, tokenize, count_freq, top_n
+
 
 def read_text(path: str | Path, encoding: str = "utf-8") -> str:
    
@@ -30,33 +29,17 @@ def write_csv(rows: Iterable[Sequence], path: str | Path,
             w.writerow(r)
 
 def frequencies_from_text(text: str) -> dict[str, int]:
-    from lib.text import normalize, tokenize  # из ЛР3
     tokens = tokenize(normalize(text))
     return Counter(tokens)  # dict-like
 
 def sorted_word_counts(freq: dict[str, int]) -> list[tuple[str, int]]:
     return sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))
 
-try:
-    content = read_text("./data/lab04/a.txt")
-    print(content)
-    
-    # Получаем частоты слов
-    freq_dict = frequencies_from_text(content)
-    
-    # # Сортируем по убыванию частоты
-    # sorted_freq = sorted_word_counts(freq_dict)
-    
-    # # Сохраняем в CSV
-    # write_csv(sorted_freq, "./data/lab04/word_freq.csv", 
-    #           header=("Word", "Frequency"))
-    
-    # print("CSV файл успешно создан!")
-    # print("Топ-5 слов:")
-    # for word, count in sorted_freq[:5]:
-    #     print(f"  {word}: {count}")
-
-except FileNotFoundError:
-    print("Ошибка: Файл не найден!")
-except UnicodeDecodeError:
-    print("Ошибка: Проблема с кодировкой файла!")
+# try:
+#     content = read_text("./data/lab04/input.txt")
+#     content = write_csv(sorted_word_counts(frequencies_from_text(content)),"./src/lab04/report.csv", header=("word", "freq") )
+ 
+# except FileNotFoundError:
+#     print("Ошибка: Файл не найден!")
+# except UnicodeDecodeError:
+#     print("Ошибка: Проблема с кодировкой файла!")

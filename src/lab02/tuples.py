@@ -2,9 +2,9 @@ from typing import *
 
 def format_record(rec: tuple[str, str, float]) -> str:
 
-    """if not isinstance(rec, tuple):
+    if not isinstance(rec, tuple):
         raise ValueError("Невернsq ввод")
-        """
+        
     fio,group,gpa=rec
     
     if not fio.strip() or not isinstance(fio,str):
