@@ -1,5 +1,5 @@
-#Лаба 4
-##io_txt_csv
+# Лаба 4
+## io_txt_csv
 ```
 import csv
 from pathlib import Path
@@ -40,7 +40,7 @@ def sorted_word_counts(freq: dict[str, int]) -> list[tuple[str, int]]:
     """Сортировка по убыванию частоты"""
     return sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))
 ```
-##text_report
+## text_report
 ```
 import sys
 import os
@@ -70,9 +70,10 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-##Проверка A
+## Проверка A
 ![pic 1](/image/lab04/a.png)
-##Проверка B
+## Проверка B
 ![pic 2](/image/lab04/b.png)
-##Проверка c
-![pic 3](/image/lab04/c.png)
+## Проверка c
+![pic 3](/image/lab04/с.png)
+
