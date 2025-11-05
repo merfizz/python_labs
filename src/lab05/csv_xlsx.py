@@ -2,13 +2,6 @@ from openpyxl import Workbook
 import csv
 from pathlib import Path
 
-# with open("data/samples/people.csv", encoding="utf-8") as f:
-#     """
-#         ws.append for row in csv.reader(f)
-        
-#         wb.save("data/out/people.xlsx")
-#     """
-
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     """
     Конвертирует CSV в XLSX.
@@ -41,10 +34,5 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 
     xlsx_path = Path(xlsx_path)
     wb.save(xlsx_path)
-
-csv_to_xlsx(
-    csv_path="data/samples/cities.csv",
-    xlsx_path="data/out/cities.xlsx",
-)
 
 

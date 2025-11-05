@@ -1,17 +1,27 @@
 [
   {
-    "name\tage\tcity": "Alice\t22\tSPB"
+    "name": "Alice",
+    "age": "22",
+    "city": "SPB"
   },
   {
-    "name\tage\tcity": "Bob\t25\tMoscow"
+    "name": "Bob",
+    "age": "25",
+    "city": "Moscow"
   },
   {
-    "name\tage\tcity": "Carlos\t30\tKazan"
+    "name": "Carlos",
+    "age": "30",
+    "city": "Kazan"
   },
   {
-    "name\tage\tcity": "Dana\t21\tSPB"
+    "name": "Dana",
+    "age": "21",
+    "city": "SPB"
   },
   {
-    "name\tage\tcity": "Andrey\t27\tNovosibirsk"
+    "name": "Andrey",
+    "age": "27",
+    "city": "Novosibirsk"
   }
 ]
