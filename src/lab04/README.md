@@ -15,9 +15,11 @@ from lib.text import normalize, tokenize, count_freq, top_n
 
 def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     """Функция считывает текстовый файл и возвращает строку"""
-    p = Path(path)
     # FileNotFoundError и UnicodeDecodeError пусть «всплывают» — это нормально
-    return p.read_text(encoding=encoding)
+    with open(path, 'r', encoding=encoding) as file:
+        return file.read()
+    
+    
 
 def write_csv(rows: Iterable[Sequence], path: str | Path,
               header: tuple[str, ...] | None = None) -> None:
@@ -76,4 +78,5 @@ if __name__ == "__main__":
 ![pic 2](/image/lab04/b.png)
 ## Проверка c
 ![pic 3](/image/lab04/с.png)
+
 
