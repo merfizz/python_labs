@@ -9,7 +9,6 @@ from lib.text import summary
 
 def main():
     try:
-      Path("data/lab04").mkdir(parents=True, exist_ok=True)
       content = read_text("./data/lab04/input.txt")
       if not content.strip():
           print("Файл пуст")
@@ -17,7 +16,7 @@ def main():
       else:
           print (summary(content))
           content = write_csv(sorted_word_counts(frequencies_from_text(content)),"./data/lab04/report.csv", header=("word", "freq") )
- 
+      print ()
     except FileNotFoundError as e:
         print(f"Ошибка: Файл не найден - {e}")
     except UnicodeDecodeError:

@@ -1,0 +1,17 @@
+[
+  {
+    "name\tage\tcity": "Alice\t22\tSPB"
+  },
+  {
+    "name\tage\tcity": "Bob\t25\tMoscow"
+  },
+  {
+    "name\tage\tcity": "Carlos\t30\tKazan"
+  },
+  {
+    "name\tage\tcity": "Dana\t21\tSPB"
+  },
+  {
+    "name\tage\tcity": "Andrey\t27\tNovosibirsk"
+  }
+]
