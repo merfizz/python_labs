@@ -109,6 +109,6 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 ## json -> csv
 ![pic 1](/image/lab05/json_csv.png)
 ## csv -> json
-![pic 2](/image/lab04/csv_json.png)
+![pic 2](/image/lab05/csv_json.png)
 ## csv -> xlsx
-![pic 3](/image/lab04/csv_xlsx.png)
+![pic 3](/image/lab05/csv_xlsx.png)
