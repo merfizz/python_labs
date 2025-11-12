@@ -1,10 +1,6 @@
 # генерация data/report.csv + ★
-import sys
-import os
 from pathlib import Path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-
-from lab04.io_txt_csv import read_text, write_csv,sorted_word_counts,frequencies_from_text
+from lib.io_txt_csv import read_text, write_csv,sorted_word_counts,frequencies_from_text
 from lib.text import summary
 
 def main():

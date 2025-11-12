@@ -22,7 +22,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     wb = Workbook()
     ws = wb.active
     ws.title = "Sheet1"
-    with open("data/samples/people.csv", encoding="utf-8") as csv_file:
+    with open(csv_path, encoding="utf-8") as csv_file:
         csv_read = csv.DictReader(csv_file)
 
         if not csv_read.fieldnames:

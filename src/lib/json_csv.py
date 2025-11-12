@@ -63,12 +63,4 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with json_path.open("w", encoding="utf-8") as json_file:
         json.dump(data_csv, json_file, ensure_ascii=False, indent=2)
 
-json_to_csv(
-        json_path="data/samples/people.json",
-        csv_path="data/out/people.csv"
-        )
-
-csv_to_json(
-        csv_path="data/samples/people.csv",
-        json_path="data/out/people.json",
-        )
+        
