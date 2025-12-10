@@ -20,9 +20,9 @@ def test_json_to_csv_roundtrip(tmp_path: Path):
     write_json(src, data)
 
     json_to_csv(str(src), str(dst))
-    # rows = read_csv_rows(dst)
-    # assert len(rows) == 2
-    # assert set(rows[0]) >= {"name", "age"}
+    rows = read_csv_rows(dst)
+    assert len(rows) == 2
+    assert set(rows[0]) >= {"name", "age"}
     
 def test_csv_to_json_roundtrip(tmp_path: Path):
     src = tmp_path / "people.csv"
