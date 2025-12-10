@@ -7,6 +7,8 @@
 ## Лабораторная работа 5 - сдана
 ## Лабораторная работа 6 - сдана
 ## Лабораторная работа 7 - сдана
+[Лаба 8](https://github.com/merfizz/python_labs/tree/main/src/lab08)
+[Лаба 9](https://github.com/merfizz/python_labs/tree/main/src/lab09)
 
 
 
