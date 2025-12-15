@@ -2,44 +2,63 @@ from collections import deque
 
 class Stack:
     def __init__(self):
-        # внутреннее хранилище стека
+        """Внутреннее хранилище стека"""
         self._data = []
 
     def push(self, item):
-        # корректно: добавление в конец списка O(1) амортизированно
+        """Добавить элемент на вершину стека."""
         self._data.append(item)
 
     def pop(self):
-        # TODO: добавить обработку случая пустого стека (сейчас IndexError от list)
+        """Снять верхний элемент стека и вернуть его. Если стек пуст — выбросить понятное исключение (например, IndexError с вменяемым сообщением)."""
+        if self.is_empty():
+            raise IndexError("pop from empty")
         return self._data.pop()
 
     def peek(self):
-        # ошибка: при пустом стеке будет IndexError — желательно вернуть None
+        """Вернуть верхний элемент без удаления."""
+        if self.is_empty():
+            return None
         return self._data[-1]
 
     def is_empty(self) -> bool:
-        # TODO: улучшить реализацию
-        return len(self._data) == 0
+        """Вернуть True, если стек пуст, иначе False."""
+        return not self._data
+
+    def __len__(self):
+        return len(self._data)
+
+    def __repr__(self):
+        return f"Stack({self._data})"
 
 
 class Queue:
     def __init__(self):
         # ошибка: вместо deque используется list → операции O(n)
-        self._data = []
+        self._data = deque()
 
     def enqueue(self, item):
-        # ошибка: вставка в начало, а не в конец
-        self._data.insert(0, item)
+        """Добавить элемент в конец очереди."""
+        self._data.append(item)
 
     def dequeue(self):
-        # ошибка: удаление с конца, а не с начала
-        return self._data.pop()
+        """Взять элемент из начала очереди и вернуть его. Если очередь пустая — выбросить понятное исключение"""
+        if self.is_empty():
+            raise IndexError("dequeue from empty queue")
+        return self._data.popleft()
 
     def peek(self):
-        # TODO: корректное поведение при пустой очереди
+        """Вернуть первый элемент без удаления."""
         if not self._data:
             return None
         return self._data[0]
 
     def is_empty(self) -> bool:
+        """Вернуть True, если очередь пуста."""
         return not self._data
+
+    def __len__(self):
+        return len(self._data)
+
+    def __repr__(self):
+        return f"Queue({list(self._data)})"
